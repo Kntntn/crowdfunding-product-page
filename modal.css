@@ -1,0 +1,237 @@
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  padding: 2rem;
+  width: 100%;
+  z-index: 3;
+}
+
+.modal-content {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 55rem;
+  margin: auto;
+}
+
+.modal-pledges {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+}
+
+.modal-pledge {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -webkit-box-shadow: 0 0rem 0.2rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0rem 0.2rem 0 rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.pledge-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 1rem;
+}
+
+.pledge-info input {
+  margin-top: 5px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  color: #3cb4ac;
+  background-color: #3cb4ac;
+}
+
+.modal-reward {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+}
+
+.modal-reward-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-reward-title div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-reward-title div:first-child h3:last-child {
+  margin-left: 1rem;
+  color: #3cb4ac;
+}
+
+.enter-pledge {
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.enter-pledge div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.enter-pledge div input {
+  border: 1px solid #3cb4ac;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  width: 6rem;
+  position: relative;
+  text-align: center;
+}
+
+.enter-pledge div input::-webkit-input-placeholder {
+  color: black;
+}
+
+.enter-pledge div input:-ms-input-placeholder {
+  color: black;
+}
+
+.enter-pledge div input::-ms-input-placeholder {
+  color: black;
+}
+
+.enter-pledge div input::placeholder {
+  color: black;
+}
+
+.enter-pledge div button {
+  border: none;
+  margin-left: 0.5rem;
+  background-color: #3cb4ac;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.input-amount {
+  position: relative;
+}
+
+.input-amount p {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(230%, -51%);
+          transform: translate(230%, -51%);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  opacity: 0.7;
+}
+
+/* Success Modal */
+.success-modal {
+  position: absolute;
+  top: 0;
+  padding: 2rem;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.success-modal-content {
+  text-align: center;
+  position: relative;
+  justify-items: center;
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 3rem;
+  max-width: 35rem;
+  margin: auto;
+}
+
+.success-modal-content button {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #3cb4ac;
+  color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 620px) {
+  .enter-pledge {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .enter-pledge p {
+    margin-bottom: 1.5rem;
+  }
+  .modal-reward-title div:first-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal-reward-title div:first-child h3 {
+    margin: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .modal {
+    padding: .5rem;
+  }
+  .modal h3 {
+    font-size: 1.1rem;
+  }
+  .success-modal-content {
+    padding: 2rem;
+  }
+  .success-modal-content h1 {
+    font-size: 1.5rem;
+  }
+  .success-modal-content p {
+    font-size: .9rem;
+  }
+}
+/*# sourceMappingURL=modal.css.map */

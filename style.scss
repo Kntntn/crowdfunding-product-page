@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&display=swap");
+
+$moderate-cyan: hsl(176, 50%, 47%);
+$dark-cyan: hsl(176, 72%, 28%);
+$black: hsl(0, 0%, 0%);
+$dark-gray: hsl(0, 0%, 48%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Commissioner", sans-serif;
+}
+
+body {
+  background: url(./images/image-hero-desktop.jpg) no-repeat;
+  background-size: contain;
+  background-color: #fafafa;
+  position: relative;
+}
+
+#overlay {
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 12rem;
+
+  button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+main {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin: 20rem auto 6rem auto;
+  padding: 0 2rem;
+  gap: 2rem;
+  max-width: 55rem;
+}
+
+.background {
+  width: 100%;
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 0rem 0.2rem 0 rgba($color: #000000, $alpha: 0.1);
+}
+
+.head {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+
+  h1 {
+    margin-top: 1rem;
+  }
+}
+
+.project-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.backbook {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  button {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+  }
+}
+
+.bookmark {
+  position: relative;
+  padding-left: 4rem !important;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 100%;
+    transform: translateY(-50%);
+  }
+}
+
+.bookmark-mobile {
+  display: none;
+}
+
+.back-project {
+  background-color: $moderate-cyan;
+  color: white;
+}
+
+.progress {
+  display: grid;
+  gap: 3rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: start;
+}
+
+.goal {
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  &:nth-child(2) {
+    border-left: 1px solid rgba($color: #000000, $alpha: 0.2);
+    border-right: 1px solid rgba($color: #000000, $alpha: 0.2);
+  }
+}
+
+.goal-padding {
+  padding-left: 3rem;
+}
+
+.progressbar {
+  position: relative;
+  height: 1rem;
+  width: 100%;
+  background-color: #f4f4f4;
+  border-radius: 2rem;
+}
+
+.current-bar {
+  position: absolute;
+  width: 70%;
+  height: inherit;
+  border-radius: 2rem;
+  background-color: $moderate-cyan;
+}
+
+.about {
+  display: grid;
+  gap: 2rem;
+  text-align: start;
+}
+
+.description {
+  display: grid;
+  gap: 2rem;
+  line-height: 1.7rem;
+  color: $dark-gray;
+}
+
+.pledges {
+  display: grid;
+  gap: 1rem;
+}
+
+.pledge {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 1rem;
+
+  p {
+    color: $dark-gray;
+  }
+
+  &:last-child {
+    opacity: 0.5;
+
+    button {
+      cursor: unset;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reward {
+  p {
+    color: $moderate-cyan;
+    font-weight: 500;
+  }
+}
+
+.select-reward {
+  span {
+    font-weight: 200;
+    color: $dark-gray;
+    font-size: 0.9rem;
+  }
+
+  button {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background-color: $moderate-cyan;
+    color: white;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1220px) {
+  header {
+    padding: 2rem 6rem;
+  }
+
+  main {
+    margin-top: 8rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    padding: 2rem 2rem;
+  }
+
+  main {
+    margin-top: 6rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url(./images/image-hero-mobile.jpg);
+  }
+
+  main {
+    margin-top: 6rem;
+    padding: 0 1rem;
+  }
+
+  .stats {
+    grid-template-columns: unset;
+    gap: 0;
+  }
+
+  .goal {
+    padding: 0;
+    text-align: center;
+
+    &:nth-child(1) {
+      padding-bottom: 1rem;
+    }
+
+    &:nth-child(2) {
+      border-right: none;
+      border-left: none;
+      border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+      padding: 1rem 0;
+    }
+
+    &:nth-child(3) {
+      padding-top: 1rem;
+    }
+  }
+
+  .flex {
+    display: grid;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  header {
+    position: relative;
+    padding: 1rem;
+
+    button {
+      display: block;
+    }
+  }
+
+  main {
+    margin-bottom: 2rem;
+  }
+
+  .navigation {
+    display: none;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    background-color: white;
+    padding: 1rem 2rem;
+    width: 100%;
+    gap: 0;
+    left: 0;
+    border-radius: 0.5rem;
+    bottom: -1rem;
+    z-index: 1;
+    transform: translateY(100%);
+    box-shadow: 0 0.5rem 1rem 0 rgba($color: #000000, $alpha: 0.1);
+
+    a {
+      width: 100%;
+      color: black;
+      padding: 1rem 0;
+
+      &:nth-child(2) {
+        border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+      }
+    }
+  }
+
+  .background {
+    padding: 1.5rem;
+  }
+
+  .backbook {
+    button {
+      padding: 0.8rem 1.5rem;
+    }
+  }
+
+  .bookmark {
+    display: none;
+  }
+
+  .bookmark-mobile {
+    display: block;
+    background: none;
+    padding: 0 !important;
+    height: 100%;
+  }
+
+  .progressbar {
+    height: 0.5rem;
+  }
+
+  .select-reward {
+    button {
+      padding: 0.8rem 1.5rem;
+    }
+  }
+}
